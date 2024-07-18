@@ -68,8 +68,8 @@ export default function AuthInputs() {
   const passwordNotValid = submitted && enteredPassword.trim().length < 6;
 
   return (
-    <div id="auth-inputs">
-      <ControlContainer>
+    <div id="auth-inputs" className='w-full max-w-sm p-8 mx-auto rounded shadow-md bg-gradient-to-b from-stone-500 to-stone-800'>
+      <div className='flec flex-col gap-3 mb-6'>
           <Input
             label="Email"
             invalid={emailNotValid}
@@ -95,9 +95,9 @@ export default function AuthInputs() {
             }
           />
 
-      </ControlContainer>
-      <div className="actions">
-        <button type="button" className="text-button">
+      </div>
+      <div className="flex justify-end gap4">
+        <button type="button" className="text-amber-400 hover:text-amber-500">
           Create a new account
         </button>
         <Button className='button' onClick={handleLogin}>Sign In</Button>
